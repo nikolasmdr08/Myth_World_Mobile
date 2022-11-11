@@ -8,11 +8,14 @@ public class Enemy : MonoBehaviour
 {
     private Board board;
     public GameObject[] bullets;
-
+    
     public Slider barLifeEnemy;
     public float maxHealth;
-    int currentHealth;
+    public int currentHealth;
 
+    public ScriptableEnemy scriptableEnemy;
+
+    //aca debajo irian los mismos elementos que van en el scriptable object para mostrarlos
     void Awake() {
         SetMaxHealth(maxHealth);
     }
@@ -20,11 +23,14 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         board = FindObjectOfType<Board>();
+        
     }
 
     public void SetMaxHealth(float health) {
         barLifeEnemy.maxValue = health;
         barLifeEnemy.value = health;
+        //ver como representar el valor de la vida con el scriptable
+        scriptableEnemy.health = health;
     }
 
     public void SetHealth(float health) {

@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public int maxHealth;
     int currentHealth;
 
+    public StatsPlayer statsPlayer;
     void Awake() {
         SetMaxHealth(maxHealth);
     }
@@ -42,6 +43,20 @@ public class Player : MonoBehaviour
             board.currentState = GameState.atacking;
             atackEnemy();
         }
+
+        //como vamos a guardar el juego?guardar y cargar
+        //yo diria que sea automatico en el start carga y en el update guarda pero en un manager no en el player
+        //if (condicion para guardarlo)
+        //{
+        //    SaveManager.SaveStatsData(this);
+        //    Debug.Log("Juego guardado");
+        //}
+        //if(condicion para cargarlos)
+        //{
+        //    SaveStatsPlayer saveStatsPlayer = SaveManager.LoadStatsPlayer();
+        //    maxHealth = saveStatsPlayer.maxHealth;
+        //    y asi con cada cosa a guardar
+        //}
     }
 
     private void atackEnemy() {

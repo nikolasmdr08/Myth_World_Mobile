@@ -571,6 +571,8 @@ MonoBehaviour:
   - {fileID: 8300128155989876560, guid: c45956e829a6fd84f8783eea5b9fa071, type: 3}
   barLifeEnemy: {fileID: 1827165063}
   maxHealth: 100
+  currentHealth: 0
+  scriptableEnemy: {fileID: 11400000, guid: f63be21bc9f6f5948877f04be6aa221f, type: 2}
 --- !u!70 &766235222
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1332,6 +1334,7 @@ MonoBehaviour:
   atack: {fileID: 8110230556986430590, guid: 1d5c6c4dd40b76a4fa4cd28d4c37c526, type: 3}
   barLifePlayer: {fileID: 1473410848}
   maxHealth: 1000
+  statsPlayer: {fileID: 11400000, guid: 2f16a59f7cc53364ba26a5b0c53e2bc7, type: 2}
 --- !u!70 &2073966355
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
