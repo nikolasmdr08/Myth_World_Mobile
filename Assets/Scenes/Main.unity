@@ -1179,7 +1179,7 @@ MonoBehaviour:
   currentState: 0
   width: 9
   height: 14
-  offSet: 40
+  offSet: 200
   tilePrefab: {fileID: 8613767953421002663, guid: 91d6477c691f54141a75207b42324cb3, type: 3}
   pieces:
   - {fileID: 3838259948745922343, guid: 59287460bcf06ca47b6966505aa56004, type: 3}

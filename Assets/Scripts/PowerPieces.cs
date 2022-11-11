@@ -6,7 +6,7 @@ public class PowerPieces : MonoBehaviour
 {
 
     private Transform target;
-    private float speed = .05f;
+    private float speed = 5f;
 
     void Start()
     {
@@ -16,6 +16,6 @@ public class PowerPieces : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target.position, speed);
+        transform.position = Vector3.MoveTowards(transform.position, target.position, speed*Time.deltaTime);
     }
 }
