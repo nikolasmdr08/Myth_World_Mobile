@@ -1,9 +1,11 @@
 
 [System.Serializable]
-public class SaveStatsPlayer
+public class SaveStatsPlayer<T>
 {
     //aca se colocan que datos necesito guardar del player
     public int maxHealth;
+    private T obj;
+
     //public int water;
     //public int fire;
     //public int ghost;
@@ -19,4 +21,7 @@ public class SaveStatsPlayer
         //    water = player. etc
     }
 
+    public SaveStatsPlayer(T obj) {
+        this.obj = obj;
+    }
 }

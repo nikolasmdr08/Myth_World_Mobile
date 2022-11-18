@@ -18,7 +18,8 @@ public class Player : MonoBehaviour
 
     public StatsPlayer statsPlayer;
     void Awake() {
-        SetMaxHealth(maxHealth);
+        Player p = SaveManager.LoadStatsPlayer<Player>("player.stats");
+        SetMaxHealth(p.maxHealth);
     }
 
     void Start()
