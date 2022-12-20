@@ -16,19 +16,12 @@ public static class SaveManager
 
     public static T LoadStatsPlayer<T>(string url)
     {
+        T saveStatsPlayer;
         string dataPath = Application.persistentDataPath + "/" + url;
-        if (File.Exists(dataPath))
-        {
-            FileStream fileStream = new FileStream(dataPath, FileMode.Open);
-            BinaryFormatter binaryFormatter = new BinaryFormatter();
-            T  saveStatsPlayer = (T) binaryFormatter.Deserialize(fileStream);
-            fileStream.Close();
-            return saveStatsPlayer;
-        }
-        else
-        {
-            Debug.LogError("El archivo no fue encontrado");
-            //return null;
-        }
+        FileStream fileStream = new FileStream(dataPath, FileMode.Open);
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        saveStatsPlayer = (T) binaryFormatter.Deserialize(fileStream);
+        fileStream.Close();
+        return saveStatsPlayer;
     }
 }
